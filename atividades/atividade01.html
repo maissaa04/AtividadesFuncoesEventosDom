@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividade-01</title>
+</head>
+<body>
+    <h1>Video Locadora JS</h1>
+    <hr>
+    <p>
+        título do filme:
+        <input type="text" id="inTitulo">
+    </p>
+
+    <p>
+        Duração (min):
+        <input type="text" id="inDuracao">
+    </p>
+
+    <p>
+        <input type="button" value="Converter Horas em Minutos" id="btnConverter">
+    </p>
+    <p id="outTitulo"></p>
+    <p id="outReposta"></p>
+
+    <p>
+        It- A coisa
+        <br>
+        3 hora(s) e 9 minuto(s)
+    </p>
+
+    <script>
+        function ConverterDuracao(){
+            //1° Criar uma referência aos elementos da página
+            let inTitulo = document.getElementById('inTitulo')
+            let inDuracao = document.getElementById('inDuracao')
+            let ontTitulo = document.getElementById('outTitulo')
+            let ontReposta = document.getElementById('ontReposta')
+
+            //Obter o valores dos campos de entrada
+            let titulo = inTitulo.value
+            let duracao = inDuracao.value
+
+            //Lógica da aplicação
+
+
+            //alterar o contéudo do campo
+            outTitulo.textContent = `${titulo}`
+            outReposta.textContent = `Valor convertido ${duracao}`
+        }
+
+        //Criar uma referência para o botão da página
+        let btnConverter = document.getElementById('btnConverte')
+        //Atribuir um evento parao meu botão
+        btnConverter.addEventListener('click', ConverterDuracao)
+        
+    </script>
+
+</body>
+</html>
